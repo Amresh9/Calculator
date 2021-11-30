@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Calculator</title>
+
+  
+</head>
+
+<body>
+
+<h1>myCalculator</h1>
+
+<div class="main">
+
+<form class="calculator" name="calculator">
+
+<div class ="screen">
+
+<input type="text" name="screen"id="input-screen" readonly>
+</div>
+
+
+<div class="btn">
+
+<input type="button"
+value="clear" onClick="Clear()" name="clear"
+
+class="clear-btn"
+
+>
+</div>
+
+<div class="btn">
+
+<input class="numbers" type="button"
+value="1" name="num1"
+onClick="valueButton(this);"
+>
+
+<input class="numbers" type="button"
+value="2" name="num2"
+onClick="valueButton(this);"
+>
+
+<input class="numbers" type="button"
+value="3" name="num3"
+onClick="valueButton(this);"
+>
+<input class="numbers" type="button"
+value="+" name="plus"
+onClick="valueButton(this);"
+>
+</div>
+
+
+
+<div class="btn">
+
+<input class="numbers" type="button"
+value="4" name="num4"
+onClick="valueButton(this);"
+>
+
+<input class="numbers" type="button"
+value="5" name="num5"
+onClick="valueButton(this);"
+>
+
+<input class="numbers" type="button"
+value="6" name="num6"
+onClick="valueButton(this);"
+>
+<input class="numbers" type="button"
+value="-" name="minus"
+onClick="valueButton(this);"
+>
+</div>
+
+<div class="btn">
+
+<input class="numbers" type="button"
+value="7" name="num7"
+onClick="valueButton(this);"
+>
+
+<input class="numbers" type="button"
+value="8" name="num8"
+onClick="valueButton(this);"
+>
+
+<input class="numbers" type="button"
+value="9" name="num9"
+onClick="valueButton(this);"
+>
+<input class="numbers" type="button"
+value="*" name="multiply"
+onClick="valueButton(this);"
+>
+</div>
+
+
+<div class="btn" id="last-line">
+
+<input class="numbers" type="button"
+value="0" name="num10"
+onClick="valueButton(this);"
+>
+<input class="numbers" type="button"
+value="00" name="num11"
+onClick="valueButton(this);"
+>
+
+<input class="numbers" type="button"
+value="/" name="divide"
+onClick="valueButton(this);"
+>
+
+<input class="numbers" type="button"
+value="=" name="equal"
+onClick="Equal();"
+>
+
+</div>
+
+
+</form
+
+
+</div>
+
+
+
+
+
+
+
+<footer>
+
+<p>made by <strong>Amresh </strong></p>
+
+</footer>
+
+
+  <script>
+ //alert("hii inner js");
+ function valueButton(e){
+    
+   calculator.screen.value +=e.value;
+  
+  
+ }
+
+function Clear(){
+   
+   calculator.screen.value=null;
+}
+function Calculate(){
+   //eval()=evaluate expression;
+  calculator.screen.value=eval(calculator.screen.value);
+  
+}
+function Equal(){
+   
+   Calculate();
+}
+</script>
+
+
+<style>
+
+
+*{margin:0;padding:0;}
+body{
+    background-color:aquamarine ;
+    align-item:center ;
+    text-align:center;
+}
+
+h1{
+    color:blue;
+    margin-bottom:35px;
+}
+
+.clear-btn{
+    margin-top:20px;
+   background-color:red;
+   color:white;
+   width:95vw;
+   font-size:20px;
+   padding:15px;
+   
+}
+.btn{
+    width:100vw;
+}
+.numbers{
+   background-color:navy;
+   color:white;
+   width:82px;
+   height:82px;
+   font-size:30px;
+   border: 2px solid black ;
+}
+
+#input-screen{
+   
+  font-size:35px;
+  width:95vw;
+  height:55px;
+  
+}
+/*
+#last-line{
+    display:flex;
+    flex-direction:row;
+ flex-flow:row wrap!important ;  
+}
+*/
+
+footer{
+    margin-top:20px;
+}
+</style>
+</body>
+</htm
